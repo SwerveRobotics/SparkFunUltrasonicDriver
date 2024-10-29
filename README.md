@@ -1,4 +1,4 @@
-# Header
+# Description:
 This repository contains a driver for integrating the [SparkFun Ultrasonic Distance Sensor - TCT40 (Qwiic)](https://www.sparkfun.com/products/24805), an I2C device, into the FTC SDK. You may want to use this sensor because, as of 2024, the walls of the competition area are clear, and so a conventional laser distance sensor would not be able to detect the wall. 
 
 # Installation:
