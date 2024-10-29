@@ -15,6 +15,7 @@ repositories {
 Then, go to `dependencies` in the same `build.gradle` file. Add `com.github.SwerveRobotics:UltrasonicDistanceSensor:0.0.1` as a dependency.
 ```Java
 dependencies {
+  // Your other stuff here...
   implementation 'com.github.SwerveRobotics:UltrasonicDistanceSensor:0.0.1'
 }
 ```
