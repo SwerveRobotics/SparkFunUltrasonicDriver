@@ -1,49 +1,48 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.0.0'
+    }
+}
+
 apply plugin: 'com.android.library'
 apply plugin: 'maven-publish'
 
 android {
+    compileSdkVersion 30
+
     defaultConfig {
         minSdkVersion 24
-        //noinspection ExpiredTargetSdkVersion
         targetSdkVersion 28
     }
-
-    compileSdkVersion 29
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
     namespace 'org.swerverobotics.ftc'
+
     publishing {
-        publishing {
-            singleVariant('release') {
-                withSourcesJar()
-                withJavadocJar()
-            }
+        singleVariant('release') {
+            withSourcesJar()
+            withJavadocJar()
         }
     }
 }
 
-buildscript {
-    repositories {
-        mavenCentral()
-        google()
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:7.2.0'
-    }
-}
-
 repositories {
+    google()
     mavenCentral()
-    google() // Needed for androidx
     maven { url "https://jitpack.io" }
 }
 
 dependencies {
-    implementation 'org.firstinspires.ftc:RobotCore:10.1.0'
-    implementation 'org.firstinspires.ftc:Hardware:10.1.0'
+    implementation 'org.firstinspires.ftc:RobotCore:11.1.0'
+    implementation 'org.firstinspires.ftc:Hardware:11.1.0'
 }
 
 publishing {
